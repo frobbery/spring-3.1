@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdbd
+    driver-class-name: org.h2.Driver
+
+  liquibase:
+    enabled: false
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+  sql:
+    init:
+      data-locations: data.sql
+      mode : always
+      continue-on-error: true
